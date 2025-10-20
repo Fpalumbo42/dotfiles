@@ -1,15 +1,15 @@
 #!/bin/bash
 
-echo "🚀 Installation des dotfiles de Fabio..."
+echo "Installing dotfiles..."
 
-# Sauvegarde les configs existantes
-echo "📦 Backup des configs existantes..."
+# Backup existing configs
+echo "Backing up existing configs..."
 mkdir -p ~/.dotfiles-backup
 cp ~/.zshrc ~/.dotfiles-backup/.zshrc.backup 2>/dev/null
 cp ~/.p10k.zsh ~/.dotfiles-backup/.p10k.zsh.backup 2>/dev/null
 
-# Crée les symlinks
-echo "🔗 Création des symlinks..."
+# Create symlinks
+echo "Creating symlinks..."
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.p10k.zsh ~/.p10k.zsh
 rm -rf ~/.config/fastfetch
@@ -17,38 +17,38 @@ ln -sf ~/dotfiles/fastfetch ~/.config/fastfetch
 
 # iTerm2 config
 if [ -f ~/dotfiles/com.googlecode.iterm2.plist ]; then
-    echo "🎨 Installation config iTerm2..."
+    echo "Installing iTerm2 configuration..."
     cp ~/dotfiles/com.googlecode.iterm2.plist ~/Library/Preferences/
 fi
 
-# Installation de oh-my-zsh si pas installé
+# Install oh-my-zsh if not already installed
 if [ ! -d ~/.oh-my-zsh ]; then
-    echo "📥 Installation de oh-my-zsh..."
+    echo "Installing oh-my-zsh..."
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 
-# Installation de Powerlevel10k
+# Install Powerlevel10k
 if [ ! -d ~/.oh-my-zsh/custom/themes/powerlevel10k ]; then
-    echo "🎨 Installation de Powerlevel10k..."
+    echo "Installing Powerlevel10k..."
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 fi
 
-# Installation des plugins zsh
+# Install zsh plugins
 if [ ! -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-    echo "💡 Installation de zsh-autosuggestions..."
+    echo "Installing zsh-autosuggestions..."
     brew install zsh-autosuggestions
 fi
 
 if [ ! -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-    echo "🎨 Installation de zsh-syntax-highlighting..."
+    echo "Installing zsh-syntax-highlighting..."
     brew install zsh-syntax-highlighting
 fi
 
-# Installation de fastfetch si pas installé
+# Install fastfetch if not already installed
 if ! command -v fastfetch &> /dev/null; then
-    echo "⚡ Installation de fastfetch..."
+    echo "Installing fastfetch..."
     brew install fastfetch
 fi
 
-echo "✅ Installation terminée!"
-echo "🔄 Relance ton terminal ou exécute: source ~/.zshrc"
+echo "Installation complete!"
+echo "Restart your terminal or run: source ~/.zshrc"
