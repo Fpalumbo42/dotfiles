@@ -1,24 +1,24 @@
 #!/bin/bash
 
 echo "Installing dotfiles..."
+echo "WARNING: Existing configurations will be overwritten!"
 
-# Backup existing configs
-echo "Backing up existing configs..."
-mkdir -p ~/.dotfiles-backup
-cp ~/.zshrc ~/.dotfiles-backup/.zshrc.backup 2>/dev/null
-cp ~/.p10k.zsh ~/.dotfiles-backup/.p10k.zsh.backup 2>/dev/null
+# Remove old configurations
+echo "Removing old configurations..."
+rm -f ~/.zshrc
+rm -f ~/.p10k.zsh
+rm -rf ~/.config/fastfetch
 
 # Create symlinks
 echo "Creating symlinks..."
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.p10k.zsh ~/.p10k.zsh
-rm -rf ~/.config/fastfetch
 ln -sf ~/dotfiles/fastfetch ~/.config/fastfetch
 
-# iTerm2 config
+# iTerm2 configuration
 if [ -f ~/dotfiles/com.googlecode.iterm2.plist ]; then
     echo "Installing iTerm2 configuration..."
-    cp ~/dotfiles/com.googlecode.iterm2.plist ~/Library/Preferences/
+    cp -f ~/dotfiles/com.googlecode.iterm2.plist ~/Library/Preferences/
 fi
 
 # Install oh-my-zsh if not already installed
