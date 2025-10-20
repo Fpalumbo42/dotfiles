@@ -20,7 +20,10 @@ export PATH="$PATH:/Users/fabio/.local/bin"
 if [ -f '/Users/fabio/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/fabio/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 if [ -f '/Users/fabio/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/fabio/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
 alias pygo='source ~/.global-py/bin/activate'
+alias clean='/Users/fabio/Documents/TestFolder/clean.sh'
+alias reload='source ~/.zshrc'
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
