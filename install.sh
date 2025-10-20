@@ -18,7 +18,9 @@ ln -sf ~/dotfiles/fastfetch ~/.config/fastfetch
 # iTerm2 configuration
 if [ -f ~/dotfiles/com.googlecode.iterm2.plist ]; then
     echo "Installing iTerm2 configuration..."
+    defaults read com.googlecode.iterm2 > /dev/null 2>&1
     cp -f ~/dotfiles/com.googlecode.iterm2.plist ~/Library/Preferences/
+    killall cfprefsd 2>/dev/null
 fi
 
 # Install oh-my-zsh if not already installed
