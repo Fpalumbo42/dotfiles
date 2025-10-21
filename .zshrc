@@ -22,7 +22,7 @@ if [ -f '/Users/fabio/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users
 if [ -f '/Users/fabio/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/fabio/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 alias pygo='source ~/.global-py/bin/activate'
-alias clean='/Users/fabio/Documents/TestFolder/clean.sh'
+alias clean='~/dotfiles/scripts/clean.sh'
 alias reload='source ~/.zshrc'
 alias split='~/dotfiles/.venv/bin/python3 ~/dotfiles/scripts/split_terminal.py'
 alias dotfiles-install='cd ~/dotfiles && ./install.sh'
