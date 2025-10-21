@@ -72,6 +72,28 @@ if ! command -v btop &> /dev/null; then
     brew install btop
 fi
 
+# Install fun terminal tools
+echo "🎨 Installing fun terminal tools..."
+if ! command -v asciiquarium &> /dev/null; then
+    echo "  → Installing asciiquarium..."
+    brew install asciiquarium
+fi
+
+if ! command -v cacafire &> /dev/null; then
+    echo "  → Installing libcaca (cacafire)..."
+    brew install libcaca
+fi
+
+# Install Node.js if not already installed (needed for 2048)
+if ! command -v node &> /dev/null; then
+    echo "  → Installing Node.js..."
+    brew install node
+fi
+
+# Install 2048 game via npm
+echo "  → Installing 2048 game..."
+npm install -g 2048-cli
+
 # Setup Python virtual environment for iTerm2 scripts
 echo "🐍 Setting up Python virtual environment..."
 cd ~/dotfiles
@@ -110,10 +132,14 @@ echo "   2. Go to 'General' > 'Magic'"
 echo "   3. Check '✓ Enable Python API'"
 echo ""
 echo "🎯 Available commands:"
-echo "   • split            → Create 3-pane layout with btop monitor"
+echo "   • split             → Create 3-pane layout with btop monitor"
 echo "   • reload            → Reload shell configuration"
 echo "   • dotfiles-install  → Reinstall dotfiles"
 echo "   • btop              → Launch btop system monitor"
+echo "   • ip                → Show your IP info"
+echo "   • aqua              → ASCII aquarium animation"
+echo "   • fire              → Fire animation"
+echo "   • 2048              → Play 2048 game"
 echo ""
 echo "💡 Tip: Press 'Esc' or 'M' in btop to customize colors and layout!"
 echo ""

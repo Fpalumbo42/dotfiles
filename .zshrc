@@ -24,9 +24,12 @@ if [ -f '/Users/fabio/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '
 alias pygo='source ~/.global-py/bin/activate'
 alias clean='/Users/fabio/Documents/TestFolder/clean.sh'
 alias reload='source ~/.zshrc'
-
 alias split='~/dotfiles/.venv/bin/python3 ~/dotfiles/scripts/split_terminal.py'
 alias dotfiles-install='cd ~/dotfiles && ./install.sh'
+alias ip='curl ipinfo.io'
+alias aqua='asciiquarium'
+alias fire='cacafire'
+alias 2048='npx 2048-cli'
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
