@@ -1,4 +1,4 @@
-fastfetch --config ~/.config/fastfetch/MetoCat.jsonc
+# fastfetch --config ~/.config/fastfetch/MetoCat.jsonc
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -25,8 +25,10 @@ alias pygo='source ~/.global-py/bin/activate'
 alias clean='/Users/fabio/Documents/TestFolder/clean.sh'
 alias reload='source ~/.zshrc'
 
+alias split='~/dotfiles/.venv/bin/python3 ~/dotfiles/scripts/split_terminal.py'
+alias dotfiles-install='cd ~/dotfiles && ./install.sh'
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
