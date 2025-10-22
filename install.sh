@@ -72,6 +72,12 @@ if ! command -v btop &> /dev/null; then
     brew install btop
 fi
 
+# Install bat (better cat)
+if ! command -v bat &> /dev/null; then
+    echo "🦇 Installing bat (better cat with syntax highlighting)..."
+    brew install bat
+fi
+
 # Install fun terminal tools
 echo "🎨 Installing fun terminal tools..."
 if ! command -v asciiquarium &> /dev/null; then
@@ -135,7 +141,10 @@ echo "🎯 Available commands:"
 echo "   • split             → Create 3-pane layout with btop monitor"
 echo "   • reload            → Reload shell configuration"
 echo "   • dotfiles-install  → Reinstall dotfiles"
+echo "   • venv              → Create/activate Python virtual environment"
+echo "   • pygo              → Activate global Python environment"
 echo "   • btop              → Launch btop system monitor"
+echo "   • cat               → Better cat with bat (syntax highlighting)"
 echo "   • ip                → Show your IP info"
 echo "   • aqua              → ASCII aquarium animation"
 echo "   • fire              → Fire animation"

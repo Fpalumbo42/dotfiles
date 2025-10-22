@@ -21,9 +21,13 @@ if [ -f '/Users/fabio/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users
 
 if [ -f '/Users/fabio/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/fabio/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
+# Bat configuration (VS Code theme)
+export BAT_THEME="Visual Studio Dark+"
+
 # Python
 alias pygo='source ~/.global-py/bin/activate'  # Activate global Python
-
+alias venv='function _venv(){ [ ! -d .venv ] && python3 -m venv .venv; source .venv/bin/activate; }; _venv'  # Create/activate venv
+alias cat='bat'  # Better cat
 # System
 alias clean='~/dotfiles/scripts/clean.sh'  # Clean system
 alias reload='source ~/.zshrc'  # Reload zsh
@@ -51,4 +55,4 @@ alias aliases='~/dotfiles/scripts/show_aliases.sh'  # List aliases
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh          
