@@ -42,6 +42,7 @@ alias split='~/dotfiles/.venv/bin/python3 ~/dotfiles/scripts/split_terminal.py' 
 alias aqua='asciiquarium'  # Aquarium animation
 alias fire='cacafire'  # Fire animation
 alias 2048='npx 2048-cli'  # 2048 game
+alias type='typespeed'  # Typing practice game
 alias tldr='function _tldr(){ curl -s cheat.sh/$1; }; _tldr'  # Quick command help
 alias insult='curl -s "https://evilinsult.com/generate_insult.php?lang=fr&type=text"'  # Random French insult
 

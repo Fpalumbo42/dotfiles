@@ -90,6 +90,11 @@ if ! command -v cacafire &> /dev/null; then
     brew install libcaca
 fi
 
+if ! command -v typespeed &> /dev/null; then
+    echo "  → Installing typespeed (typing practice game)..."
+    brew install typespeed
+fi
+
 # Install Node.js if not already installed (needed for 2048)
 if ! command -v node &> /dev/null; then
     echo "  → Installing Node.js..."
@@ -149,6 +154,7 @@ echo "   • ip                → Show your IP info"
 echo "   • aqua              → ASCII aquarium animation"
 echo "   • fire              → Fire animation"
 echo "   • 2048              → Play 2048 game"
+echo "   • type              → Typing practice game"
 echo ""
 echo "💡 Tip: Press 'Esc' or 'M' in btop to customize colors and layout!"
 echo ""
